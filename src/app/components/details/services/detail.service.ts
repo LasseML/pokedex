@@ -22,12 +22,12 @@
   public fetchPokemonByName(name: string): void {
     this.http.get<Pokemon>('${pokeAPI}/pokemon/${name}')
       .pipe(
-        map(pokemon: Pokemon) => ({
+        map((pokemon: Pokemon) => ({
           ...pokemon,
           image: getFrontImageUrl(pokemon.id)
         }))
       )
-      .subscribe((pokemon:Pokemon) => {
+      .subscribe((pokemon: Pokemon) => {
         this.pokemon = pokemon;
     });
   }
