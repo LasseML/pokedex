@@ -1,27 +1,46 @@
 # Pokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+Angular application simulating a pokeDex using API calls to pokeapi.co for PokeMon stats 
 
-## Development server
+## Project Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Webpage should consist of 4 pages:
+    1. Landing page
+    2. Trainer page
+    3. Pokemon Catalogue
+    4. Pokemon detail
 
-## Code scaffolding
+2. The application should obtain the data from the https://pokeapi.co/ api
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. The landing page should:
+    1. Present the user with a box to enter their trainer name
+    2. Store the name locally
+    3. Automatically log in the user on the next visit
 
-## Build
+4. The Trainer page should:
+    1. Display all the pokemon the user have collected
+    2. Display the pokemon with their avatar
+    3. Route the user to the pokemon detail page when clicking on the pokemon card
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+5. The Catalogue page should:
+    1. Present each pokemon in a *card style* presentation
+    2. Route to the pokemon detail page when clicking on a pokemon card
 
-## Running unit tests
+6. The Detail page should:
+    1. Display an image of the pokemon
+    2. Display base stats and physical profile
+    3. The pokemons moves
+    4. Display a button for collecting the pokemons
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+7. The user should automatically be routed back to the login page if no Trainer name is present in local storage
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Available commands
 
-## Further help
+### `npm install`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Installs the required dependencies
+
+### `ng serve`
+
+Navigate to [http://localhost:4200](http://localhost:4200/). The app will automatically reload if you change any of the source files.
