@@ -12,7 +12,7 @@ export class LoginContainer {
   constructor(private router: Router) { }
 
   handleLoginSuccess():void {
-    this.router.navigate([AppRoutes.TRAINER]);
+    this.router.navigate([AppRoutes.POKEMON]);
   }
 
 }
