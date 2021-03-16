@@ -8,7 +8,7 @@
     <p>{{ pokemon.weight }}</p>
   </article>
   <app-base-button
-
+    *ngIf="this.isButtonVisible"
     type="button"
     (click)="onCollectPokemon( pokemon )">
     Add to collection

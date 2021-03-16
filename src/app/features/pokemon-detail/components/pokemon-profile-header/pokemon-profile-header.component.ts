@@ -9,18 +9,36 @@ import {getStorage, setStorage} from '../../../../utils/storage.utils';
 
 export class PokemonProfileHeaderComponent implements OnInit{
   @Input() pokemon!: Pokemon;
-
+  public isButtonVisible = true;
   ngOnInit() {
-    const existingCollection = getStorage('collection');
+    const existingCollection: Pokemon[] | null = getStorage('collection');
     if (existingCollection === null) {
       setStorage('collection', []);
+    } else if(existingCollection !== null) {
+      const checkCollected = (pokeName: any) => existingCollection.some( ({name}) => name == pokeName);
+      if (checkCollected(this.pokemon.name)){
+        this.isButtonVisible = false;
+      }
     }
   }
+
   onCollectPokemon(pokemon: Pokemon) {
     const existingCollection: any = getStorage('collection');
-    existingCollection.push(pokemon);
+
+    const pokeArr = {
+      id: pokemon.id,
+      height: pokemon.height,
+      image: pokemon.image,
+      name: pokemon.name,
+      sprite: pokemon.sprite,
+      stats: pokemon.stats,
+      type: pokemon.type,
+      weight: pokemon.weight,
+      url: pokemon.url
+    };
+    existingCollection.push(pokeArr);
     setStorage('collection', existingCollection);
-    const test: any = getStorage('collection');
-    console.log(test);
+    this.isButtonVisible = false;
+    console.log(existingCollection);
   }
 }
