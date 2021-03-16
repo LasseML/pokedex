@@ -17,6 +17,5 @@ export class PokemonContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemonService.fetchPokemon();
-
   }
 }
