@@ -1,0 +1,16 @@
+<header>
+  <aside>
+    <img [src]="pokemon.image" [alt]="pokemon.name" />
+  </aside>
+  <article>
+    <h4>{{ pokemon.name }}</h4>
+    <p>{{ pokemon.height }}</p>
+    <p>{{ pokemon.weight }}</p>
+  </article>
+  <app-base-button
+
+    type="button"
+    (click)="onCollectPokemon( pokemon )">
+    Add to collection
+  </app-base-button>
+</header>

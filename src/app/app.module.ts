@@ -11,6 +11,9 @@ import { NavbarComponent } from './features/navbar/navbar.component';
 import {LoginContainer} from './features/login/containers/login/login.container';
 import {LoginFormComponents} from './features/login/components/login-form/login-form.components';
 import {BaseButtonComponent} from './features/base-button/base-button.components';
+import {PokemonDetailContainer} from './features/pokemon-detail/containers/pokemon-detail/pokemon-detail.container';
+import {PokemonProfileHeaderComponent} from './features/pokemon-detail/components/pokemon-profile-header/pokemon-profile-header.component';
+
 
 
 @NgModule({
@@ -20,10 +23,12 @@ import {BaseButtonComponent} from './features/base-button/base-button.components
     PokemonContainer,
     PokemonGridComponent,
     LoginContainer,
+    PokemonDetailContainer,
     // Components
     NavbarComponent,
     LoginFormComponents,
-    BaseButtonComponent
+    BaseButtonComponent,
+    PokemonProfileHeaderComponent
   ],
   imports: [
     BrowserModule,
