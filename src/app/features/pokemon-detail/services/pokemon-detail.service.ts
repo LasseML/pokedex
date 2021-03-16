@@ -5,6 +5,9 @@ import {environment} from '../../../../environments/environment';
 import {getFrontImageUrl} from '../../../utils/pokemon-image.util';
 import {map} from 'rxjs/operators';
 
+/*
+* Fetches the pokemon's JSON from the pokeAPI
+ */
 
 const { pokeAPI } = environment;
 

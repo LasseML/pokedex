@@ -4,6 +4,11 @@ import { Observable } from 'rxjs';
 import {AppRoutes} from '../enums/app-routes.enum';
 import {SessionService} from '../session/session.service';
 
+
+/*
+* Checks to see if the user is logged in
+* If not return to the Landing page
+ */
 @Injectable({
   providedIn: 'root'
 })
