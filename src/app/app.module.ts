@@ -7,11 +7,13 @@ import { HttpClientModule } from '@angular/common/http';
 import {PokemonContainer} from './features/pokemon/containers/pokemon/pokemon.container';
 import {PokemonGridComponent} from './features/pokemon/components/pokemon-grid/pokemon-grid.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PokemonContainer,
     PokemonGridComponent,
+
   ],
   imports: [
     BrowserModule,
