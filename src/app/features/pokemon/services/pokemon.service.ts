@@ -17,11 +17,13 @@ export class PokemonService {
   public pokemon: Pokemon[] = [];
   public error: string = '';
 
+  // gets a list of pokemons from the api
   constructor(private readonly http: HttpClient) {
     this.pokemonCache$ = this.http.get<PokemonResponse>(`${pokeAPI}/pokemon?limit=151`)
       .pipe(shareReplay(1));
   }
 
+  // pipes pokemons to pokemoncache, adds id and image url
   fetchPokemon(): void {
     this.pokemonCache$
       .pipe(
@@ -41,7 +43,7 @@ export class PokemonService {
         }
     );
   }
-
+  // gets returnes pokemon image and id
   private getIdAndImage(url: string): any {
     const id = url.split('/').filter(Boolean).pop();
     return {
