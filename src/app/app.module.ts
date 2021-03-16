@@ -11,6 +11,7 @@ import { NavbarComponent } from './features/navbar/navbar.component';
 import {LoginContainer} from './features/login/containers/login/login.container';
 import {LoginFormComponents} from './features/login/components/login-form/login-form.components';
 import {BaseButtonComponent} from './features/base-button/base-button.components';
+import {AppContainerComponent} from './features/shared/app-container/app-container.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {BaseButtonComponent} from './features/base-button/base-button.components
     // Components
     NavbarComponent,
     LoginFormComponents,
-    BaseButtonComponent
+    BaseButtonComponent,
+    AppContainerComponent,
 
   ],
   imports: [
