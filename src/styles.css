@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+:root {
+  --col-primaryDark: #001524;
+  --col-secondaryDark: #15616d;
+  --col-primaryLight: #ffecd1;
+  --col-secondarylight: #ff7d00;
+  --col-accent: #78290f;
+}

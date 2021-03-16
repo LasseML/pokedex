@@ -1,0 +1,38 @@
+<form [formGroup]="loginForm">
+  <label for="trainer-name" aria-label="Trainer name">
+    What's your name?
+  </label>
+  <input
+    id="trainer-name"
+    name="trainer-name"
+    formControlName="trainerName"
+    type="text"
+    placeholder="Enter your trainer name"
+    required
+    minlength="2"
+    maxlength="15"
+  >
+  <!-- Input text warnings (throws TS2531 error)
+  <ng-container *ngIf="(trainerName.invalid && (trainerName.dirty || trainerName.touched))">
+
+     Required
+    <p *ngIf="trainerName.errors.required">
+      Trainer name is required
+    </p>
+     Min Length
+    <p *ngIf="trainerName.errors.minLength">
+      Trainer name is too short (min 2)
+    </p>
+     Max Length
+    <p *ngIf="trainerName.errors.maxLength">
+      Trainer name is too long (max 15)
+    </p>
+  </ng-container> -->
+
+  <app-base-button
+    [disabled]="loginForm.invalid || loading"
+    type="button"
+    (click)="onBeginClick()">
+    Begin Adventure!
+  </app-base-button>
+</form>
