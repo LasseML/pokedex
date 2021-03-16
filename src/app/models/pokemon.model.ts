@@ -5,9 +5,9 @@ export interface Pokemon {
   image?: string;
   weight?: number;
   height?: number;
-  type?: PokemonType[];
+  types?: PokemonType[];
   stats?: PokemonStat[];
-  sprite?: PokemonSprite[];
+  sprites?: PokemonSprite[];
 }
 
 export interface PokemonType {
