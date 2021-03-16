@@ -30,9 +30,9 @@ export class PokemonProfileHeaderComponent implements OnInit{
       height: pokemon.height,
       image: pokemon.image,
       name: pokemon.name,
-      sprite: pokemon.sprite,
+      sprite: pokemon.sprites,
       stats: pokemon.stats,
-      type: pokemon.type,
+      type: pokemon.types,
       weight: pokemon.weight,
       url: pokemon.url
     };
