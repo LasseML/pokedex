@@ -3,7 +3,9 @@ import {ActivatedRoute} from '@angular/router';
 import {PokemonDetailService} from '../../services/pokemon-detail.service';
 import {Pokemon} from '../../../../models/pokemon.model';
 
-
+/*
+* Obtains the pokemon we are about to look at that can be used throughout the program
+ */
 @Component({
   selector: 'app-pokemon-detail-container',
   templateUrl: './pokemon-detail.container.html'

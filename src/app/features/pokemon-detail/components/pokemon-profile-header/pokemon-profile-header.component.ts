@@ -7,7 +7,10 @@ import {getStorage, setStorage} from '../../../../utils/storage.utils';
   templateUrl: './pokemon-profile-header.component.html',
   styleUrls: ['pokemon-profile-header.component.scss']
 })
-
+/*
+* Initializes the users collection of pokemon
+* onCollectPokemon adds the current looked at pokemon to the users collection
+*/
 export class PokemonProfileHeaderComponent implements OnInit{
   @Input() pokemon!: Pokemon;
   public isButtonVisible = true;
