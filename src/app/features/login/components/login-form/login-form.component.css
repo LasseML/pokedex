@@ -1,0 +1,30 @@
+
+.container {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 5px solid red;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.form-input {
+  display: inline-table;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+  padding: 5px;
+}

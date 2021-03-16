@@ -5,7 +5,8 @@ import {getStorage} from '../../../../utils/storage.utils';
 
 @Component({
   selector: 'app-login-form',
-  templateUrl: './login-form.components.html'
+  templateUrl: './login-form.components.html',
+  styleUrls: ['login-form.component.css']
 })
 export class LoginFormComponents implements OnInit{
 
