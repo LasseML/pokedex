@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import {PokemonContainer} from './features/pokemon/containers/pokemon/pokemon.container';
 import {PokemonGridComponent} from './features/pokemon/components/pokemon-grid/pokemon-grid.component';
-import { NavbarComponent } from './features/navbar/navbar.component';
+import { NavbarComponent } from './features/shared/navbar/navbar.component';
 import {LoginContainer} from './features/login/containers/login/login.container';
 import {LoginFormComponents} from './features/login/components/login-form/login-form.components';
 import {BaseButtonComponent} from './features/base-button/base-button.components';
