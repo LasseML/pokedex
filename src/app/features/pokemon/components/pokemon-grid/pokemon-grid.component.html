@@ -1,18 +1,14 @@
 <ul class="pokemon-grid">
   <li *ngFor="let poke of pokemon">
-    <figure class="card card--normal">
-      <div class="card__image-container">
-        <img [src]="poke.image" [alt]="poke.name" class="card__image">>
-      </div>
-
-      <figcaption class="card__caption">
-        <h1 class="card__name">{{ poke.name | titlecase }}</h1>
-
-        <h3 class="card__type">
-          normal
-        </h3>
-
-      </figcaption>
-    </figure>
+    <div [routerLink]="poke.name">
+      <figure class="card card--normal">
+        <div class="card__image-container">
+          <img [src]="poke.image" [alt]="poke.name" class="card__image">
+        </div>
+        <figcaption class="card__caption">
+          <h1 class="card__name">{{ poke.name | titlecase }}</h1>
+        </figcaption>
+      </figure>
+    </div>
   </li>
 </ul>

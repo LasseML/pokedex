@@ -1,0 +1,21 @@
+<nav>
+  <ul>
+      <li>
+        <a routerLink="/pokemon">
+          <h3>PokeDex App!</h3>
+        </a>
+      </li>
+      <ng-container *ngIf="hasActiveSession">
+        <li>
+          <a routerLink="/pokemon">
+            <h3>Catalog</h3>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/trainer">
+            <h3>Trainer</h3>
+          </a>
+        </li>
+      </ng-container>
+  </ul>
+</nav>

@@ -4,9 +4,9 @@ import {Pokemon} from '../../../../models/pokemon.model';
 
 @Component({
   selector: 'app-pokemon-container',
-  templateUrl: './pokemon.container.html'
+  templateUrl: './pokemon-container.component.html'
 })
-export class PokemonContainer implements OnInit {
+export class PokemonContainerComponent implements OnInit {
 
   constructor(private readonly pokemonService: PokemonService) {
   }

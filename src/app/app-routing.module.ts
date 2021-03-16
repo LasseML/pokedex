@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {PokemonContainer} from './features/pokemon/containers/pokemon/pokemon.container';
+import {PokemonContainerComponent} from './features/pokemon/containers/pokemon/pokemon-container.component';
 import {LoginContainer} from './features/login/containers/login/login.container';
 import {SessionGuard} from './guards/session.guard';
 import {PokemonDetailContainer} from './features/pokemon-detail/containers/pokemon-detail/pokemon-detail.container';
+import {TrainerContainerComponent} from './features/trainer/containers/trainer-container.component';
+
 
 
 const routes: Routes = [
@@ -18,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'pokemon',
-    component: PokemonContainer,
+    component: PokemonContainerComponent,
     canActivate: [SessionGuard]
   },
   {
@@ -28,9 +30,8 @@ const routes: Routes = [
   },
   {
     path: 'trainer',
-    // component: TrainerContainer,
-    redirectTo: 'pokemon',
-    // canActivate: [SessionGuard]
+    component: TrainerContainerComponent,
+    canActivate: [SessionGuard]
   },
 /*  {
     path: '**',
