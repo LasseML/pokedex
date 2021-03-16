@@ -1,6 +1,6 @@
 <ul class="pokemon-grid">
   <li *ngFor="let poke of pokemon">
-    <div [routerLink]="poke.name">
+    <div [routerLink]="'/pokemon/' + poke.name">
       <figure class="card card--normal">
         <div class="card__image-container">
           <img [src]="poke.image" [alt]="poke.name" class="card__image">
