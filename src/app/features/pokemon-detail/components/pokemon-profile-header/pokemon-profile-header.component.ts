@@ -4,7 +4,8 @@ import {getStorage, setStorage} from '../../../../utils/storage.utils';
 
 @Component({
   selector: 'app-pokemon-profile-header',
-  templateUrl: './pokemon-profile-header.component.html'
+  templateUrl: './pokemon-profile-header.component.html',
+  styleUrls: ['pokemon-profile-header.component.scss']
 })
 
 export class PokemonProfileHeaderComponent implements OnInit{

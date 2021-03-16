@@ -1,12 +1,52 @@
 <header>
-  <aside>
-    <img [src]="pokemon.image" [alt]="pokemon.name" />
-  </aside>
-  <article>
-    <h4>{{ pokemon.name }}</h4>
-    <p>{{ pokemon.height }}</p>
-    <p>{{ pokemon.weight }}</p>
-  </article>
+  <figure class="card card--normal">
+    <div class="card__image-container">
+      <img src="{{ pokemon.image }}" alt="{{ pokemon.name }}" class="card__image">
+    </div>
+
+    <figcaption class="card__caption">
+      <h1 class="card__name">{{ pokemon.name | titlecase}}</h1>
+
+      <h3 class="card__type">
+        {{ pokemon.type }}
+      </h3>
+
+      <table class="card__stats">
+        <tbody>
+        <tr *ngFor="let stat of pokemon.stats">
+          <th>{{ stat.stat.name | titlecase}}</th>
+          <td>{{ stat.base_stat }}</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h1 class="card__name">{{ 'Profile' | titlecase}}</h1>
+
+      <table class="card__stats">
+        <tbody>
+        <tr>
+          <th>Weight</th>
+          <td>{{ pokemon.weight }}</td>
+        </tr>
+        <tr>
+          <th>Height</th>
+          <td>{{ pokemon.height }}</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="card__abilities">
+        <h4 class="card__ability">
+          <span class="card__label">Ability</span>
+          Run Away
+        </h4>
+        <h4 class="card__ability">
+          <span class="card__label">Hidden Ability</span>
+          Anticipation
+        </h4>
+      </div>
+    </figcaption>
+  </figure>
   <app-base-button
     *ngIf="this.isButtonVisible"
     type="button"
